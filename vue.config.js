@@ -1,3 +1,10 @@
 module.exports = {
-    publicPath: "my-cv"
+    publicPath: "my-cv",
+    css: {
+        loaderOptions: {
+            sass: {
+                data: `@import 'public/_variables.scss';`
+            }
+        }
+    }
 };

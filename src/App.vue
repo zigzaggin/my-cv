@@ -30,7 +30,7 @@
     }
 
     body {
-        background: #f7f7f7;
+        background: $gray;
         font-family: 'Open Sans', sans-serif;
         font-size: 14px;
     }

@@ -51,10 +51,11 @@
             font-size: 1.5em;
         }
         .meta {
-            background: #efefef;
+            background: $gray;
             padding: 5px 10px;
             font-size: .8em;
             width: 100%;
+            border-left: solid 3px $dark-gray;
         }
         .tags {
             float: right;
