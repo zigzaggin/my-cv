@@ -30,7 +30,7 @@
     .rail {
         padding: 15px;
         background: #3f7ba6;
-        width: 100%;
+        width: 300px;
         height: 100%;
         color: white;
     }
