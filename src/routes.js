@@ -13,8 +13,7 @@ const router = new VueRouter({
         {path: "/", component: CV},
         {path: "/projects", component: Projects, meta: {title: "Projects"}},
         {path: "/solutions", component: Solutions, meta: {title: "Solutions"}},
-    ],
-    mode: "history"
+    ]
 });
 
 router.afterEach((to) => {
