@@ -8,4 +8,4 @@ call git commit -m 'deploy'
 
 call git push -f https://github.com/zigzaggin/my-cv.git master:gh-pages
 
-cd -
+cd ..
