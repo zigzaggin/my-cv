@@ -1,12 +1,14 @@
 <template>
     <div>
         <vue-particles color="#dedede" :move-speed="1" :particles-number="60"></vue-particles>
-        <div id="app">
-            <div class="rail-wrapper">
-                <Rail></Rail>
-            </div>
-            <div class="page-wrapper">
-                <router-view></router-view>
+        <div class="app-pad">
+            <div id="app">
+                <div class="rail-wrapper">
+                    <Rail></Rail>
+                </div>
+                <div class="page-wrapper">
+                    <router-view></router-view>
+                </div>
             </div>
         </div>
     </div>
@@ -104,9 +106,13 @@
         font-size: 1.2em;
     }
 
+    .app-pad {
+        padding: 30px;
+    }
+
     #app {
         max-width: 1400px;
-        margin: 30px auto;
+        margin: 0 auto;
         background: white;
         box-shadow: 3px 3px 1px rgba(0, 0, 0, .1);
         display: flex;
@@ -119,6 +125,19 @@
             width: 100%;
             height: 100%;
             padding: 15px;
+        }
+    }
+
+    @media #{$responsive} {
+        .app-pad {
+            padding: 10px;
+        }
+        #app {
+            display: block;
+            margin: 0 0 300px;
+            .rail-wrapper {
+                display: block;
+            }
         }
     }
 </style>
