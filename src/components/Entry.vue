@@ -89,4 +89,21 @@
             margin-top: 15px;
         }
     }
+    @media #{$responsive} {
+        .header {
+            .icon {
+                float: right;
+                margin-right: 0;
+            }
+            .meta {
+                span {
+                    padding: 5px 0;
+                    display: block;
+                    border-left: none !important;
+                    padding-left: 0 !important;
+                    margin-left: 0 !important;
+                }
+            }
+        }
+    }
 </style>

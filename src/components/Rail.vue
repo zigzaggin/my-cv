@@ -91,6 +91,8 @@
     @media #{$responsive} {
         .rail {
             width: 100%;
+            border-right: none;
+            border-bottom: solid 3px $dark-menu-bg;
             &.open {
                 ul {
                     display: block;
@@ -103,11 +105,14 @@
         ul {
             display: none;
             margin-top: 15px;
+            li a {
+                padding: 15px;
+            }
         }
         .menu-activator {
             display: block;
             position: absolute;
-            right: -5px;
+            right: -15px;
             top: 0;
         }
     }
