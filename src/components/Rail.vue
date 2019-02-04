@@ -48,7 +48,6 @@
     @import "../assets/hb/hamburgers";
 
     .rail-content {
-        position: fixed;
     }
 
     .rail {
