@@ -4,7 +4,12 @@
             <h2>{{title}}</h2>
             <div class="meta">
                 <span>{{meta}}</span>
-                <span class="tags"><fai class="icon" icon="tags"></fai>{{tags}}</span>
+                <span class="location" v-if="location">
+                    <a :href="locationUrl" target="_blank">
+                        <fai class="icon" icon="map-marker-alt"></fai>{{location}}
+                    </a>
+                </span>
+                <span class="tags" v-if="tags"><fai class="icon" icon="tags"></fai>{{tags}}</span>
             </div>
         </div>
         <div class="ellipse">
@@ -15,16 +20,18 @@
 
 <script>
     import {library} from "@fortawesome/fontawesome-svg-core"
-    import {faTags} from "@fortawesome/free-solid-svg-icons";
+    import {faTags, faMapMarkerAlt} from "@fortawesome/free-solid-svg-icons";
 
-    library.add(faTags);
+    library.add(faTags, faMapMarkerAlt);
 
     export default {
         name: "entry",
         props: {
             title: {},
             meta: {},
-            tags: {}
+            tags: {},
+            location: {},
+            locationUrl: {}
         },
         data() {
             return {
@@ -42,10 +49,12 @@
 <style lang="scss" scoped>
     .entry {
         width: 100%;
+        + .entry {
+            margin-top: 30px;
+        }
     }
 
     .header {
-        cursor: pointer;
         margin-bottom: 15px;
         h2 {
             font-size: 1.5em;
@@ -56,13 +65,18 @@
             font-size: .8em;
             width: 100%;
             border-left: solid 3px $dark-gray;
-        }
-        .tags {
-            float: right;
-            .icon {
-                display: inline-block;
-                margin-right: 10px;
+            span + span {
+                margin-left: 10px;
+                border-left: solid 1px $dark-gray;
+                padding-left: 10px
             }
+        }
+        a {
+            color: black;
+        }
+        .icon {
+            display: inline-block;
+            margin-right: 7px;
         }
     }
 

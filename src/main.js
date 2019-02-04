@@ -6,6 +6,9 @@ import {FontAwesomeIcon} from '@fortawesome/vue-fontawesome'
 Vue.use(FontAwesomeIcon);
 Vue.component('fai', FontAwesomeIcon);
 
+import VueParticles from 'vue-particles'
+Vue.use(VueParticles);
+
 import App from './App.vue'
 import router from "./routes"
 

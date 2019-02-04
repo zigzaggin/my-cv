@@ -7,14 +7,10 @@
             </span>
         </div>
         <ul>
-            <li>
-                <router-link to="/">Curriculum Vitae</router-link>
-            </li>
-            <li>
-                <router-link to="/projects">Projects</router-link>
-            </li>
-            <li>
-                <router-link to="/solutions">Solutions</router-link>
+            <li v-for="route in $router.options.routes" :key="route.path" >
+                <router-link :to="route.path">
+                    {{ route.meta.title }}
+                </router-link>
             </li>
         </ul>
     </div>
@@ -29,15 +25,15 @@
 <style lang="scss" scoped>
     .rail {
         padding: 15px;
-        background: #3f7ba6;
-        width: 300px;
+        background: $menu-bg;
+        border-right: solid 3px $dark-menu-bg;
+        width: 235px;
         height: 100%;
         color: white;
     }
 
     h1 {
         font-size: 1.7em;
-        font-weight: 300;
         width: 100%;
         margin: -3px 0 0;
     }
@@ -62,7 +58,7 @@
                 margin: 0 -15px;
                 display: block;
                 &:hover, &.router-link-exact-active {
-                    background: rgba(0,0,0,.1);
+                    background: rgba(0, 0, 0, .1);
                 }
             }
         }
