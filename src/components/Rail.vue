@@ -1,7 +1,7 @@
 <template>
     <div :class="['rail', open?'open': '']">
         <div class="about">
-            <h1>Ben Potter</h1>
+            <h1 @click="goHome">Ben Potter</h1>
             <span class="tag-line">
                 Software Developer and UX Designer
             </span>
@@ -34,6 +34,9 @@
         methods: {
             toggleMenu() {
                 this.open = !this.open;
+            },
+            goHome() {
+                this.$router.push({path: '/'})
             }
         }
     }
@@ -55,6 +58,7 @@
         font-size: 1.7em;
         width: 100%;
         margin: -3px 0 0;
+        cursor: pointer;
     }
 
     .about {
