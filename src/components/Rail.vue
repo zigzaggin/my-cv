@@ -1,26 +1,28 @@
 <template>
     <div :class="['rail', open?'open': '']">
-        <div class="about">
-            <h1 @click="goHome">Ben Potter</h1>
-            <span class="tag-line">
+        <div class="rail-content">
+            <div class="about">
+                <h1 @click="goHome">Ben Potter</h1>
+                <span class="tag-line">
                 Software Developer and UX Designer
             </span>
-            <div class="menu-activator">
-                <div :class="['hamburger', 'hamburger--squeeze', open?'is-active': '']" @click="toggleMenu">
+                <div class="menu-activator">
+                    <div :class="['hamburger', 'hamburger--squeeze', open?'is-active': '']" @click="toggleMenu">
                   <span class="hamburger-box">
                     <span class="hamburger-inner"></span>
                   </span>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="menu-container">
-            <ul>
-                <li v-for="route in $router.options.routes" :key="route.path">
-                    <router-link :to="route.path">
-                        {{ route.meta.title }}
-                    </router-link>
-                </li>
-            </ul>
+            <div class="menu-container">
+                <ul>
+                    <li v-for="route in $router.options.routes" :key="route.path">
+                        <router-link :to="route.path">
+                            {{ route.meta.title }}
+                        </router-link>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 </template>
@@ -44,6 +46,10 @@
 
 <style lang="scss" scoped>
     @import "../assets/hb/hamburgers";
+
+    .rail-content {
+        position: fixed;
+    }
 
     .rail {
         padding: 15px;
@@ -93,6 +99,10 @@
     }
 
     @media #{$responsive} {
+        .rail-content {
+            position: relative;
+        }
+
         .rail {
             width: 100%;
             border-right: none;
