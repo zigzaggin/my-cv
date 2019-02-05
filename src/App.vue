@@ -38,10 +38,6 @@
         position: fixed;
         z-index: 1;
         width: 100%;
-        height: 100%;
-    }
-
-    html {
         height: 100vh;
         background: linear-gradient(-45deg, #93aeee, #23A6D5, #23D5AB);
         background-size: 400% 400%;
@@ -115,7 +111,7 @@
 
     #app {
         max-width: 1400px;
-        margin: 0 auto;
+        margin: 0 auto 300px;
         background: white;
         box-shadow: 3px 3px 1px rgba(0, 0, 0, .1);
         display: flex;
