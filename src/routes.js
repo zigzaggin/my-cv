@@ -12,7 +12,7 @@ import Teaching from "./pages/Teaching"
 const router = new VueRouter({
     base: "/my-cv",
     routes: [
-        {path: "/", component: CV, meta: {title: "Curriculum Vitae"}},
+        {path: "/", component: CV, meta: {title: "About Me"}},
         {path: "/speaking", component: Speaking, meta: {title: "Speaking"}},
         {path: "/teaching", component: Teaching, meta: {title: "Teaching"}},
         {path: "/projects", component: Projects, meta: {title: "Projects"}},

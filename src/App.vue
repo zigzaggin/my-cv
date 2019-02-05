@@ -105,6 +105,9 @@
     h3 {
         font-size: 1.2em;
     }
+    code {
+        font-weight: bold;
+    }
 
     .app-pad {
         padding: 30px;

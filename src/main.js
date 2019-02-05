@@ -9,6 +9,9 @@ Vue.component('fai', FontAwesomeIcon);
 import VueParticles from 'vue-particles'
 Vue.use(VueParticles);
 
+import 'prismjs'
+import 'prism-themes/themes/prism-xonokai.css'
+
 import App from './App.vue'
 import router from "./routes"
 

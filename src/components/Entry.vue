@@ -9,6 +9,7 @@
                         <fai class="icon" icon="map-marker-alt"></fai>{{location}}
                     </a>
                 </span>
+                <span class="website" v-if="website"><a :href="website" target="_blank"><fai class="icon" icon="external-link-alt"></fai>{{website}}</a></span>
                 <span class="tags" v-if="tags"><fai class="icon" icon="tags"></fai>{{tags}}</span>
             </div>
         </div>
@@ -20,9 +21,9 @@
 
 <script>
     import {library} from "@fortawesome/fontawesome-svg-core"
-    import {faTags, faMapMarkerAlt} from "@fortawesome/free-solid-svg-icons";
+    import {faTags, faMapMarkerAlt, faExternalLinkAlt} from "@fortawesome/free-solid-svg-icons";
 
-    library.add(faTags, faMapMarkerAlt);
+    library.add(faTags, faMapMarkerAlt, faExternalLinkAlt);
 
     export default {
         name: "entry",
@@ -31,7 +32,8 @@
             meta: {},
             tags: {},
             location: {},
-            locationUrl: {}
+            locationUrl: {},
+            website: {}
         },
         data() {
             return {
