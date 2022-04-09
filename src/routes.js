@@ -8,6 +8,7 @@ import Projects from "./pages/Projects"
 import Solutions from "./pages/Solutions"
 import Speaking from "./pages/Speaking"
 import Teaching from "./pages/Teaching"
+import CodeDoodles from "@/pages/CodeDoodles";
 
 const router = new VueRouter({
     base: "/my-cv",
@@ -17,6 +18,7 @@ const router = new VueRouter({
         {path: "/teaching", component: Teaching, meta: {title: "Teaching"}},
         {path: "/projects", component: Projects, meta: {title: "Projects"}},
         {path: "/solutions", component: Solutions, meta: {title: "Solutions"}},
+        {path: "/doodles", component: CodeDoodles, meta: {title: "Code Doodles"}},
     ]
 });
 

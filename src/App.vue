@@ -139,4 +139,20 @@
             }
         }
     }
+
+    .button {
+      padding: 15px;
+      background: $menu-bg;
+      color: #fff;
+      border-left: solid 3px $dark-menu-bg;
+      cursor: pointer;
+      display: inline-block;
+      text-decoration: none;
+      &:hover {
+        background: darken($menu-bg, 5%);
+      }
+      + .button {
+        margin-left: 15px;
+      }
+    }
 </style>

@@ -2,7 +2,7 @@
     <div :class="['iframe-container', show?'show':'hide']">
         <div class="showing" @click="hideFrame" v-if="show">Hide</div>
         <iframe v-bind="$attrs" v-if="show"></iframe>
-        <div class="iframe-hidden" @click="showFrame" v-else>
+        <div class="iframe-hidden button" @click="showFrame" v-else>
             {{showText}}
         </div>
     </div>

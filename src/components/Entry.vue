@@ -3,7 +3,7 @@
         <div class="header" @click="toggleShow">
             <h2>{{title}}</h2>
             <div class="meta">
-                <span>{{meta}}</span>
+                <span v-if="meta">{{meta}}</span>
                 <span class="location" v-if="location">
                     <a :href="locationUrl" target="_blank">
                         <fai class="icon" icon="map-marker-alt"></fai>{{location}}
